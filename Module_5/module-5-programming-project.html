@@ -4,6 +4,7 @@
 <meta charset="utf-8">
 <title>CMPS 162: Module 5 Programming Project</title>
 <style>* { font-family: monospace; }</style>
+<script type="text/javascript" src="./js/textalert.js"></script>
 <script>
 
 //--------//
@@ -13,7 +14,7 @@ console.log("Events");
 
 // 1. Change the link (the <a> tag) in the HTML body below such that a hello
 //    message is displayed on a click event.
-
+// done
 
 
 //--------------//
@@ -24,10 +25,13 @@ console.log("Input Fields");
 // 1. Change the background color to red for the input text field (the <input>
 //    tag) in the HTML body when obtaining the focus and change it back to
 //    white when the focus is lost.
+// done
+
+
 
 // 2. Read the content of the input field (the <input> tag) when the focus is
 //    lost and alert it to the user.
-
+// done
 
 
 //------------//
@@ -37,7 +41,7 @@ console.log("Paragraphs");
 
 // 1. Write JavaScript code that changes the text in the paragraph below
 //    (the <p> tag) from "Hello World!" to "Goodbye World!".
-
+// done
 
 
 //--------//
@@ -47,7 +51,7 @@ console.log("Images");
 
 // 1. Add an image to the HTML body (use the <img> tag). Make it disappear when
 //    someone clicks on it.
-
+// done
 
 
 //--------//
@@ -58,17 +62,34 @@ console.log("Styles");
 // 1. Use the style of div1 and div2 to swap the colors of the divs.
 
 function swapColors() {
-  // TODO
+  let div1 = document.getElementById("div1");
+  let div2 = document.getElementById("div2");
+  let temp = div1.style.backgroundColor + "";
+  div1.style.backgroundColor = div2.style.backgroundColor;
+  div2.style.backgroundColor = temp;
 }
 
+
+
+// function for changing the paragraph
+function changeParagraph() {
+    document.querySelector("p").innerHTML = "Goodbye World!";
+    
+  }
+  window.onload = changeParagraph;
+
+// function for hiding the image
+function hideImage() {
+    document.getElementById("Tesla").style.display = "none";
+  }
 
 
 </script>
 </head>
 <body>
   See console!<br><br>
-  <a>Click here for a greeting!</a><br><br>
-  <input type="text"><br><br>
+  <a href="mod_5_greeting_page.html">Click here for a greeting!</a><br><br>
+  <input type="text" onfocus="this.style.backgroundColor='red'"; onblur="readAndAlert();this.style.backgroundColor='white'" ><br><br>
   <p>Hello World!</p>
   <div id="div1"
        style="background-color:yellow;"
@@ -80,5 +101,7 @@ function swapColors() {
        onclick="swapColors();">
     World
   </div>
+  <button onclick="swapColors();">Swap Colors</button>
+  <img id="Tesla" src="./images/Tesla_ModelS.jpeg" onclick="hideImage()" width="300">
 </body>
 </html>
