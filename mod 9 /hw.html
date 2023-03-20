@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/hw.js"></script>
+    <title>Form Validation</title>
+</head>
+<body>
+    <h1>Validation</h1>
+        <form>
+
+            <label name="fname">What is your first name?</label>
+            <input type="text" id="fname" required>
+            <br>
+            <br>
+            <label name="lname">What is your last name?</label>
+            <input type="text" id="lname" required>
+            <br>
+            <br>
+            <label name="address1">What is your address (1)?</label>
+            <input id="address1" required>
+            <br>
+            <br>
+            <label name="address2">What is your address (2)?</label>
+            <input id="address2" required>
+            <br>
+            <br>
+            <label name="city">What is your city?</label>
+            <input type="text" id="city" required>
+            <br>
+            <br>
+            <!-- fix only letters allowed in js -->
+            <label name="state">What is your state?</label>
+            <input type="text" maxlength="2" id="state" required>
+            <br>
+            <br>
+            <!-- fix only numbers allowed in js -->
+            <label name="zip">What is your zip?</label>
+            <input type="text" id="zip" maxlength="5" required>
+            <br>
+            <br>
+            <label name="q1">What is your favorite coffee place in Pittsburgh?</label>
+            <input type="text" id="q1">
+            <br>
+            <br>
+            <label name="q2">What is your favorite lunch spot in Pittsburgh?</label>
+            <input type="text" id="q2">
+            <br>
+            <br>
+            <label name="q3">What is your favorite city to visit outside of Pittsburgh?</label>
+            <input type="text" id="q3">
+
+        </form>
+        <button onclick="validateCustomerForm()">Submit</button>
+
+
+
+
+
+
+
+</body>
+</html>
